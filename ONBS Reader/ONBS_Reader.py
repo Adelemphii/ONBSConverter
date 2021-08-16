@@ -65,21 +65,13 @@ def read_file_and_export():
 		if tick == 0:
 			note_list.append([note.key for note in chord])
 
-		elif tick - previous_tick >= 20:
-			if tick - previous_tick >= 40:
-				note_list.append(25)
-				note_list.append(25)
-				if tick - previous_tick >= 60:
-					note_list.append(25)
-					note_list.append(25)
-					note_list.append(25)
+		sub = tick - previous_tick
+		while sub >= 20:
 			note_list.append(25)
-			note_list.append([note.key for note in chord])
-			previous_tick = tick
+			sub -= 20
+		note_list.append([note.key for note in chord])
+		previous_tick = tick
 
-		else:
-			note_list.append([note.key for note in chord])
-			previous_tick = tick
 		print(tick, [note.key for note in chord])
 
 	print()
