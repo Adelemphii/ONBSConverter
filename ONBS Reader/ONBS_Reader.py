@@ -4,6 +4,8 @@ from tkinter import filedialog
 
 window = tk.Tk()
 window.title("Adele's Epic NBS to FRP Converter!")
+p1 = tk.PhotoImage(file = 'icon.png')
+window.iconphoto(False, p1)
 
 def find_path():
 	global file_path
