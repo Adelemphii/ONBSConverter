@@ -1,2 +1,0 @@
-Use pyinstaller to run this command in this directory:
-pyinstaller --onefile ONBS_Reader.py
